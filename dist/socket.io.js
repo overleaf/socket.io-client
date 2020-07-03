@@ -1179,7 +1179,7 @@ var io = ('undefined' === typeof module ? {} : module.exports);
         break;
 
       case 'ack':
-        var pieces = data.match(/^([0-9]+)(\+)?(.*)/);
+        var pieces = data.match(/^([0-9]+)(\+)?([\s\S]*)/);
         if (pieces) {
           packet.ackId = pieces[1];
           packet.args = [];
