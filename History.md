@@ -1,3 +1,8 @@
+0.9.17-overleaf-1 / 2020-07-07
+=====================
+
+ * Overleaf: fix parser issues with control characters
+    https://github.com/overleaf/issues/issues/3199
 
 0.9.17 / 2014-05-22
 ===================
