@@ -2437,7 +2437,7 @@ var io = ('undefined' === typeof module ? {} : module.exports);
    */
 
   WS.prototype.close = function () {
-    this.websocket.close();
+    if (this.websocket) this.websocket.close();
     return this;
   };
 
