@@ -1709,6 +1709,7 @@ var io = ('undefined' === typeof module ? {} : module.exports);
       self.setHeartbeatTimeout();
 
       function connect (transports){
+        self.onClose()
         if (self.transport) self.transport.clearTimeouts();
 
         self.transport = self.getTransport(transports);
@@ -1964,8 +1965,9 @@ var io = ('undefined' === typeof module ? {} : module.exports);
     this.open = false;
 
     if (wasConnected || wasConnecting) {
-      this.transport.close();
-      this.transport.clearTimeouts();
+      this.onClose()
+      if (this.transport) this.transport.close();
+      if (this.transport) this.transport.clearTimeouts();
       if (wasConnected) {
         this.publish('disconnect', reason);
 
