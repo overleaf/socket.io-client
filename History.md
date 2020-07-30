@@ -1,3 +1,9 @@
+0.9.17-overleaf-2 / 2020-07-30
+==============================
+
+ * Overleaf: harden the cleanup of sockets/transports
+    https://github.com/overleaf/issues/issues/3371
+
 0.9.17-overleaf-1 / 2020-07-07
 =====================
 
