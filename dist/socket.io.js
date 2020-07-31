@@ -1,4 +1,4 @@
-/*! Socket.IO.js build:0.9.17, development. Copyright(c) 2011 LearnBoost <dev@learnboost.com> MIT Licensed */
+/*! Socket.IO.js build:0.9.17-overleaf-2, development. Copyright(c) 2011 LearnBoost <dev@learnboost.com> MIT Licensed */
 
 var io = ('undefined' === typeof module ? {} : module.exports);
 (function() {
@@ -25,7 +25,7 @@ var io = ('undefined' === typeof module ? {} : module.exports);
    * @api public
    */
 
-  io.version = '0.9.17';
+  io.version = '0.9.17-overleaf-2';
 
   /**
    * Protocol implemented.
@@ -1709,6 +1709,7 @@ var io = ('undefined' === typeof module ? {} : module.exports);
       self.setHeartbeatTimeout();
 
       function connect (transports){
+        self.onClose()
         if (self.transport) self.transport.clearTimeouts();
 
         self.transport = self.getTransport(transports);
@@ -1964,8 +1965,9 @@ var io = ('undefined' === typeof module ? {} : module.exports);
     this.open = false;
 
     if (wasConnected || wasConnecting) {
-      this.transport.close();
-      this.transport.clearTimeouts();
+      this.onClose()
+      if (this.transport) this.transport.close();
+      if (this.transport) this.transport.clearTimeouts();
       if (wasConnected) {
         this.publish('disconnect', reason);
 
@@ -2435,7 +2437,7 @@ var io = ('undefined' === typeof module ? {} : module.exports);
    */
 
   WS.prototype.close = function () {
-    this.websocket.close();
+    if (this.websocket) this.websocket.close();
     return this;
   };
 
