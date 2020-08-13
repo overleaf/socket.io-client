@@ -1,3 +1,11 @@
+0.9.17-overleaf-3 / 2020-08-13
+==============================
+
+ * Overleaf: harden the cleanup of sockets/transports
+    Delayed inflight of packages may trigger a heartbeat after closing the
+     transport.
+    https://github.com/overleaf/issues/issues/3371
+
 0.9.17-overleaf-2 / 2020-07-30
 ==============================
 
