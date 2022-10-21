@@ -37,11 +37,11 @@
         "url": "https://github.com/LearnBoost/socket.io-client.git"
     },
     "dependencies": {
-        "active-x-obfuscator": "0.0.1",
         "ws": "^1.1.5",
         "xmlhttprequest": "^1.8.0"
     },
     "devDependencies": {
+        "active-x-obfuscator": "0.0.1",
         "express": "2.5.x",
         "expresso": "*",
         "jade": "*",
