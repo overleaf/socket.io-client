@@ -279,11 +279,10 @@ if (!module.parent){
   builder(args.length ? args : false, { minify:false }, function (err, content) {
     if (err) return console.error(err);
 
-    fs.write(
+    fs.writeSync(
         fs.openSync(__dirname + '/../dist/socket.io.js', 'w')
       , content
       , 0
-      , 'utf8'
     );
     console.log('Successfully generated the development build: socket.io.js');
   });
@@ -292,11 +291,10 @@ if (!module.parent){
   builder(args.length ? args : false, function (err, content) {
     if (err) return console.error(err);
  
-    fs.write(
+    fs.writeSync(
         fs.openSync(__dirname + '/../dist/socket.io.min.js', 'w')
       , content
       , 0
-      , 'utf8'
     );
     console.log('Successfully generated the production build: socket.io.min.js');
   });
