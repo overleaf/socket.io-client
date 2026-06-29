@@ -1,7 +1,7 @@
 {
     "name": "socket.io-client",
     "description": "Socket.IO client for the browser and node.js",
-    "version": "0.9.17-overleaf-5",
+    "version": "0.9.17-overleaf-6",
     "main": "./lib/io.js",
     "browserify": "./dist/socket.io.js",
     "homepage": "http://socket.io",
@@ -37,7 +37,7 @@
         "url": "https://github.com/LearnBoost/socket.io-client.git"
     },
     "dependencies": {
-        "ws": "^1.1.5",
+        "ws": "^8.21.0",
         "xmlhttprequest": "^1.8.0"
     },
     "devDependencies": {
