@@ -17,4 +17,7 @@ test-acceptance:
 build:
 	@node ./bin/builder.js
 
+setup:
+	npm ci --ignore-scripts  # expresso tries to install broken packages via scripts
+
 .PHONY: test
