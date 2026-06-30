@@ -15,7 +15,7 @@ test-acceptance:
 	@node support/test-runner/app $(TRANSPORT)
 
 build:
-	@node ./bin/builder.js
+	@node ./bin/builder.js  websocket xhr-polling
 
 setup:
 	npm ci --ignore-scripts  # expresso tries to install broken packages via scripts
