@@ -1,3 +1,11 @@
+0.9.17-overleaf-6 / 2026-06-30
+==============================
+
+* Overleaf: restrict build to websocket and xhr-polling
+* Overleaf: add setup target for installing packages
+* Overleaf: fix builder script to use correct uglify calls
+* Overleaf: move ws and xmlhttprequest to devDependencies
+
 0.9.17-overleaf-5 / 2022-10-26
 ==============================
 
