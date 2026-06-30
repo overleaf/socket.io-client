@@ -20,4 +20,4 @@ build:
 setup:
 	npm ci --ignore-scripts  # expresso tries to install broken packages via scripts
 
-.PHONY: test
+.PHONY: test run-tests test-acceptance build setup
