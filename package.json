@@ -1,7 +1,7 @@
 {
     "name": "socket.io-client",
     "description": "Socket.IO client for the browser and node.js",
-    "version": "0.9.17-overleaf-5",
+    "version": "0.9.17-overleaf-6",
     "main": "./lib/io.js",
     "browserify": "./dist/socket.io.js",
     "homepage": "http://socket.io",
@@ -36,19 +36,17 @@
         "type": "git",
         "url": "https://github.com/LearnBoost/socket.io-client.git"
     },
-    "dependencies": {
-        "ws": "^1.1.5",
-        "xmlhttprequest": "^1.8.0"
-    },
     "devDependencies": {
         "active-x-obfuscator": "0.0.1",
         "express": "2.5.x",
-        "expresso": "*",
+        "expresso": "^0.9.2",
         "jade": "*",
         "should": "*",
         "socket.io": "0.9.17",
         "stylus": "*",
-        "uglify-js": "^3.17.3"
+        "uglify-js": "^3.17.3",
+        "ws": "^1.1.5",
+        "xmlhttprequest": "^1.8.0"
     },
     "engines": {
         "node": ">= 0.4.0"
